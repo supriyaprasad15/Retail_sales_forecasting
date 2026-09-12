@@ -1,0 +1,7 @@
+name: rossmann-sales-forecasting
+
+entry_points:
+  train:
+    parameters:
+      n_estimators: {type: int, default: 800}
+    command: "python -m src.train_ml"

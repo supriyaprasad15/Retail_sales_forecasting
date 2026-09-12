@@ -1,0 +1,13 @@
+stages:
+  train:
+    cmd: python -m src.train_ml
+    deps:
+      - data/train.csv
+      - data/test.csv
+      - data/store.csv
+      - src/feature_engineering.py
+      - src/train_ml.py
+    outs:
+      - models/sales_model.pkl
+      - models/customers_model.pkl
+      - outputs/submission.csv
